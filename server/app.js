@@ -5,6 +5,6 @@ let app = express();
 
 app.use( express.static(__dirname + "/../client") ); //tells express to look inside client. This will serve the index.html file.
 app.get("/sports", (request, response) => {
-  response.json(["Cycling", "Weightlisfting", "Swimming"]);
+  response.json(["Cycling", "Weightlisfting", "Swimming", "Snowboarding"]);
 });
 app.listen(8181, () => console.log("listening on 8181"));
