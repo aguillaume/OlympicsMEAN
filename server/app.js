@@ -10,7 +10,6 @@ app.use( express.static(__dirname + "/../client") ); //tells express to look ins
 app.get("/sports", (request, response) => {
   let sports = mongoUtil.sports();
   sports.find().toArray((err, docs) => {
-    console.log(JSON.stringify(docs));
     let sportNames = docs.map((sport) => sport.name);
     response.json(sportNames);
   });
